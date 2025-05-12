@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Curso CNC - Unificado</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/><style>
+body {
+    background: linear-gradient(135deg, #FF6EC7, #2AF598, #0099FF, #FF914D);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+img {
+    margin: 20px;
+    border: 5px solid #FF6EC7;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #FF6EC7;
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.05);
+}
+
+.card, .container, .module, .quiz {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+    color: #000;
+}
+
+button {
+    background: linear-gradient(45deg, #2AF598, #0099FF);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background: linear-gradient(45deg, #FF914D, #FF6EC7);
+    transform: scale(1.05);
+}
+</style></head>
+<body>
+<!-- Login -->
+<div id="login-section" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div class="login-box card p-4 shadow rounded animate__animated animate__fadeInDown"><div class="text-center mb-4"><i class="bi bi-person-circle" style="font-size: 3rem; color: #0d6efd;"></i></div>
+<form onsubmit="event.preventDefault(); showSection('presentacion-section');">
+<div class="mb-3">
+<label class="form-label" for="usuario">Nombre de usuario</label>
+<input class="form-control" id="usuario" required="" type="text"/>
+</div>
+<button class="btn btn-primary w-100" type="submit">Ingresar</button>
+</form>
+</div>
+</div>
+<!-- Presentación -->
+<div id="presentacion-section" style="display: none;">
+<div class="container mt-5">
+<div class="card shadow p-4 rounded animate__animated animate__fadeInUp" style="background-color: #ffffff;"><div class="text-center mb-4"><i class="bi bi-gear-fill" style="font-size: 3rem; color: #007bff;"></i></div>
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Presentación - Curso CNC</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1 class="text-center mb-4">S&amp;S MOLDS Service &amp; Solutions for Molds S.A de C.V.</h1>
+<p><strong>Empresa fundada en el año 2013</strong>, cuenta con más de 10 años de experiencia brindando servicios y soluciones de calidad para moldes de inyección de plástico, buscando ofrecer el mejor servicio a nuestros clientes mediante nuevos métodos y equipos que garanticen la calidad del producto.</p>
+<h3>Misión</h3>
+<p>Brindar soluciones optimas en la fabricación, reparación y mantenimiento de moldes y troqueles, mediante prácticas de mejora continua que aseguren la satisfacción total de nuestros clientes.</p>
+<h3>Visión</h3>
+<p>Consolidarnos como una empresa referente en soluciones de moldes y troqueles en el área Metal-Plástico-Automotriz, ofreciendo siempre servicios y productos de calidad.</p>
+<button class="btn btn-success mt-4" onclick="showSection('modules-section')">Iniciar Curso</button>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="videoModalLabel" class="modal fade" id="videoModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="videoModalLabel">Video demostrativo de la máquina HAAS VM-3</h5>
+<button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body text-center">
+<video controls="" id="haasVideo" width="100%">
+<source src="hazz.mp4" type="video/mp4"/>
+          Tu navegador no soporta la reproducción de video.
+        </video>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+</div>
+</div>
+</div>
+<!-- Módulos -->
+<div id="modules-section" style="display: none;">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Curso CNC - modules</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="#"><i class="bi bi-cpu"></i> Curso CNC</a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#" onclick="showSection('presentacion-section')">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="showSection('modules-section')">Módulos</a></li>
+<li class="nav-item ms-3"><span class="nav-link disabled text-light">Usuario: <strong id="usuario-nombre"></strong></span></li></ul>
+</div>
+</div>
+</nav>
+<div class="container mt-5 pt-5">
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<title>Curso CNC - Módulo 1</title>
+</head>
+<body>
+<h1>Módulo 1: Maquinaria CNC</h1>
+<div id="content"></div>
+<script>
+// Restaurar sección desde localStorage
+document.addEventListener("DOMContentLoaded", function () {
+    const section = localStorage.getItem("curso_seccion") || "login-section";
+    showSection(section);
+});
+
+// Guardar el progreso
+function showSection(id) {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("presentacion-section").style.display = "none";
+    document.getElementById("modules-section").style.display = "none";
+    document.getElementById(id).style.display = "block";
+    localStorage.setItem("curso_seccion", id);
+}
+
+const submodules = [
+    {
+        title: "Bienvenido al mundo del CNC",
+        text: `
+<h2>1.1 Conoce la máquina HAAS VM-3</h2>
+<p><strong>Objetivo de la sección:</strong> Familiarizar al aprendiz con las características, componentes y capacidades de la fresadora CNC HAAS VM-3, comprendiendo su funcionamiento básico y su aplicación en la industria de moldes automotrices.</p>
+
+<p><strong>¿Qué es la HAAS VM-3?</strong><br>
+La HAAS VM-3 es un centro de mecanizado vertical de alto rendimiento, diseñado para trabajos de alta precisión como la fabricación de moldes, matrices y componentes complejos. Esta máquina es reconocida por su rigidez, estabilidad térmica y capacidad de mantener tolerancias estrictas, lo que la hace ideal para la industria automotriz y de moldes.</p>
+
+<p><strong>Especificaciones técnicas principales:</strong></p>
+<ul>
+<li><strong>Recorridos de los ejes:</strong><br>
+Eje X: 1,016 mm<br>
+Eje Y: 660 mm<br>
+Eje Z: 635 mm<div style="text-align:center; margin:10px 0;"><img src="ejes.jpeg" style="width:300px; border:1px solid #ccc; border-radius:8px;"><p class="text-muted">Figura: Recorridos de los ejes en la mesa de trabajo</p></div></li>
+<li><strong>Mesa de trabajo:</strong><br>
+Dimensiones: 1,372 mm x 635 mm<br>
+Capacidad máxima de carga: 1,814 kg</li>
+<li><strong>Husillo:</strong><br>
+Tipo: Cono ISO 40<br>
+Velocidad máxima: 12,000 rpm<br>
+Potencia: 22.4 kW (30 hp)<br>
+Transmisión: Accionamiento directo en línea</li>
+
+<div style="text-align:center; margin-top: 15px; margin-bottom: 15px;">
+  <img src="WhatsApp Image 2025-04-30 at 9.31.11 PM.jpeg" alt="Husillo de la máquina CNC" style="width: 300px; height: auto; border-radius: 8px; border: 1px solid #ccc;">
+  <p class="text-muted" style="font-size: 0.9em;">Figura: Husillo de la máquina CNC HAAS VM-3</p>
+</div>
+<li><strong>Cambiador de herramientas:</strong><br>
+Tipo: Montaje lateral automático<br>
+Capacidad: 24 herramientas<div style="text-align:center; margin:10px 0;"><img src="WhatsApp Image 2025-04-30 at 9.31.43 PM (1).jpeg" style="width:300px; border:1px solid #ccc; border-radius:8px; margin:5px;"><img src="WhatsApp Image 2025-04-30 at 9.31.43 PM.jpeg" style="width:300px; border:1px solid #ccc; border-radius:8px; margin:5px;"><p class="text-muted">Figura: Cambiador de herramientas de la fresadora CNC HAAS VM-3</p></div></li>
+<li><strong>Sistema de control:</strong><br>
+Control CNC Haas con pantalla panorámica<br>
+Interfaz Ethernet y conexión Wi-Fi<br>
+Funciones avanzadas como mecanizado de alta velocidad y macros definidas por el usuario</li>
+<li><strong>Dimensiones y peso:</strong><br>
+Dimensiones: 3,861 mm x 2,616 mm x 3,073 mm<br>
+Peso: 6,350 kg<div style="text-align:center; margin:10px 0;"><img src="hazz v3.jpeg" style="width:300px; border:1px solid #ccc; border-radius:8px;"><p class="text-muted">Figura: Vista general de la fresadora CNC HAAS VM-3</p></div></li>
+</ul>
+
+<p><strong>Componentes clave de la HAAS VM-3:</strong></p>
+<ul>
+<li><strong>Husillo:</strong> Gira a alta velocidad y sostiene la herramienta de corte. Su diseño reduce la vibración y mejora la precisión.</li>
+<li><strong>Mesa de trabajo:</strong> Superficie para fijar la pieza. Permite trabajar con piezas grandes y pesadas.</li>
+<li><strong>Cambiador automático de herramientas:</strong> Cambia herramientas rápidamente, mejorando la eficiencia.</li>
+<li><strong>Sistema de control CNC Haas:</strong> Interfaz amigable con programación avanzada y conectividad.</li>
+<li><strong>Sistema de refrigeración y evacuación de virutas:</strong> Mantiene la zona limpia y prolonga la vida útil de las herramientas.</li>
+</ul>
+`,
+        questions: [{"q": "¿Qué tipo de máquina es la HAAS VM-3?", "options": ["Torno horizontal", "Centro de mecanizado vertical", "Impresora 3D"], "correct": 1}, {"q": "¿Cuál es la velocidad máxima del husillo de la HAAS VM-3?", "options": ["6,000 rpm", "12,000 rpm", "15,000 rpm"], "correct": 1}, {"q": "¿Cuántas herramientas puede albergar el cambiador automático?", "options": ["12", "24", "30"], "correct": 1}, {"q": "¿Cuál es la capacidad de carga máxima de la mesa de trabajo?", "options": ["1,200 kg", "1,500 kg", "1,814 kg"], "correct": 2}, {"q": "¿Qué función cumple el sistema de refrigeración y evacuación de virutas?", "options": ["Mejorar la iluminación", "Mantener limpia la zona de trabajo", "Cambiar herramientas"], "correct": 1}]
+    }
+];
+
+let currentSubmodule = 0;
+
+function loadSubmodule(index) {
+    const sub = submodules[index];
+    const container = document.getElementById('content');
+    container.innerHTML = `
+        <div class="module submodulo-${index}">
+            <h2>${sub.title}</h2>
+            <p>${sub.text.replace(/\n/g, "<br>")}</p>
+            <button onclick="startQuiz()">Iniciar cuestionario</button>
+<button type="button" class="btn btn-success" style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#videoModal">
+  <i class="bi bi-play-circle-fill" style="margin-right: 5px;"></i> Ver video
+</button>
+
+        </div>
+    `;
+}
+
+
+
+function startQuiz() {
+    const sub = submodules[currentSubmodule];
+    let html = `<div class="quiz mt-4"><h2>Cuestionario: ${sub.title}</h2>`;
+    html += `<button class="btn btn-secondary mb-3" onclick="loadSubmodule(currentSubmodule)">Volver al contenido</button>`;
+    const savedAnswers = JSON.parse(localStorage.getItem("quiz_respuestas_" + currentSubmodule) || "{}");
+
+    sub.questions.forEach((q, idx) => {
+        html += `<div class="mb-2"><p>${q.q}</p>`;
+        q.options.forEach((opt, i) => {
+            const checked = savedAnswers[idx] == i ? "checked" : "";
+            const disabled = savedAnswers[idx] != null ? "disabled" : "";
+            html += `<label><input type="radio" name="q${idx}" value="${i}" ${checked} ${disabled} onchange="guardarRespuesta(${idx}, ${i})"> ${opt}</label><br>`;
+        });
+        html += `</div>`;
+    });
+    html += `<button onclick="submitQuiz()" class="btn btn-primary mt-2">Enviar respuestas</button><div id="feedback" class="mt-3 fw-bold"></div></div>`;
+    document.getElementById('content').innerHTML = html;
+}
+
+
+
+function submitQuiz() {
+    const sub = submodules[currentSubmodule];
+    let score = 0;
+    sub.questions.forEach((q, idx) => {
+        const selected = document.querySelector('input[name="q' + idx + '"]:checked');
+        if (selected && parseInt(selected.value) === q.correct) {
+            score++;
+        }
+    });
+    const feedback = document.getElementById('feedback');
+    if (score >= 4) {
+        feedback.innerHTML = `¡Muy bien! Has aprobado este submódulo con ${score}/5.<br><button onclick="nextSubmodule()">Continuar</button>`;
+    } else {
+        feedback.innerHTML = `No alcanzaste el puntaje mínimo (${score}/5).<br><button onclick="startQuiz()">Reintentar</button>`;
+    }
+}
+
+function nextSubmodule() {
+    currentSubmodule++;
+    if (currentSubmodule < submodules.length) {
+        loadSubmodule(currentSubmodule);
+    } else {
+        document.getElementById('content').innerHTML = "<h2>¡Felicidades! Has completado el Módulo 1.</h2>";
+    }
+}
+
+
+// Guardar y restaurar el submódulo actual
+document.addEventListener("DOMContentLoaded", function () {
+    const savedIndex = parseInt(localStorage.getItem("currentSubmodule") || "0");
+    if (!isNaN(savedIndex)) {
+        currentSubmodule = savedIndex;
+        loadSubmodule(currentSubmodule);
+    }
+});
+
+function loadSubmodule(index) {
+    currentSubmodule = index;
+    localStorage.setItem("currentSubmodule", index);
+    const sub = submodules[index];
+    const container = document.getElementById('content');
+    container.innerHTML = `
+        <div class="module submodulo-${index}">
+            <h2>${sub.title}</h2>
+            <p>${sub.text.replace(/\n/g, "<br>")}</p>
+            <button onclick="startQuiz()">Iniciar cuestionario</button>
+            <button onclick="window.open('hazz.mp4', '_blank')" class="btn btn-success" style="margin-left: 10px;">
+              <i class='bi bi-play-circle-fill'></i> Ver video
+            </button>
+        </div>
+    `;
+}
+
+</script>
+<script>
+// Restaurar sección desde localStorage
+document.addEventListener("DOMContentLoaded", function () {
+    const section = localStorage.getItem("curso_seccion") || "login-section";
+    showSection(section);
+});
+
+// Guardar el progreso
+function showSection(id) {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("presentacion-section").style.display = "none";
+    document.getElementById("modules-section").style.display = "none";
+    document.getElementById(id).style.display = "block";
+    localStorage.setItem("curso_seccion", id);
+}
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const nombre = localStorage.getItem("usuario");
+        if (nombre) {
+            const userSpan = document.getElementById("usuario-nombre");
+            if (userSpan) {
+                userSpan.textContent = nombre;
+            }
+        }
+    });
+</script>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="videoModalLabel" class="modal fade" id="videoModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="videoModalLabel">Video demostrativo de la máquina HAAS VM-3</h5>
+<button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body text-center">
+<video controls="" id="haasVideo" width="100%">
+<source src="hazz.mp4" type="video/mp4"/>
+          Tu navegador no soporta la reproducción de video.
+        </video>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer="" src="js/main.js"></script>
+<script>
+// Restaurar sección desde localStorage
+document.addEventListener("DOMContentLoaded", function () {
+    const section = localStorage.getItem("curso_seccion") || "login-section";
+    showSection(section);
+});
+
+// Guardar el progreso
+function showSection(id) {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("presentacion-section").style.display = "none";
+    document.getElementById("modules-section").style.display = "none";
+    document.getElementById(id).style.display = "block";
+    localStorage.setItem("curso_seccion", id);
+}
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const nombre = localStorage.getItem("usuario");
+        if (nombre) {
+            const userSpan = document.getElementById("usuario-nombre");
+            if (userSpan) {
+                userSpan.textContent = nombre;
+            }
+        }
+    });
+</script>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="videoModalLabel" class="modal fade" id="videoModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="videoModalLabel">Video demostrativo de la máquina HAAS VM-3</h5>
+<button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body text-center">
+<video controls="" id="haasVideo" width="100%">
+<source src="hazz.mp4" type="video/mp4"/>
+          Tu navegador no soporta la reproducción de video.
+        </video>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+</div>
+<script>
+// Restaurar sección desde localStorage
+document.addEventListener("DOMContentLoaded", function () {
+    const section = localStorage.getItem("curso_seccion") || "login-section";
+    showSection(section);
+});
+
+// Guardar el progreso
+function showSection(id) {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("presentacion-section").style.display = "none";
+    document.getElementById("modules-section").style.display = "none";
+    document.getElementById(id).style.display = "block";
+    localStorage.setItem("curso_seccion", id);
+}
+
+function login() {
+    const username = document.getElementById('username').value;
+    if (username.trim() !== '') {
+        localStorage.setItem('username', username);
+        window.location.href = 'home.html';
+    } else {
+        alert('Por favor ingresa tu nombre');
+    }
+}
+
+function startCourse() {
+    window.location.href = 'modules.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const userNameElement = document.getElementById('user-name');
+    if (userNameElement) {
+        userNameElement.textContent = localStorage.getItem('username') || 'Alumno';
+    }
+});
+
+
+// Lógica para mostrar secciones
+function showSection(id) {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("presentacion-section").style.display = "none";
+    document.getElementById("modules-section").style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+</script>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="videoModalLabel" class="modal fade" id="videoModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="videoModalLabel">Video demostrativo de la máquina HAAS VM-3</h5>
+<button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body text-center">
+<video controls="" id="haasVideo" width="100%">
+<source src="hazz.mp4" type="video/mp4"/>
+          Tu navegador no soporta la reproducción de video.
+        </video>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+function guardarRespuesta(pregunta, seleccion) {
+    const key = "quiz_respuestas_" + currentSubmodule;
+    let data = JSON.parse(localStorage.getItem(key) || "{}");
+    data[pregunta] = seleccion;
+    localStorage.setItem(key, JSON.stringify(data));
+    document.querySelectorAll('input[name="q' + pregunta + '"]').forEach(r => r.disabled = true);
+}
+
+</script>
